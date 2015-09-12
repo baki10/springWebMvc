@@ -77,6 +77,10 @@ public final class welcome_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <a href=\" ");
       if (_jspx_meth_spring_url_1(_jspx_page_context))
         return;
+      out.write("\">Users</a>\n");
+      out.write("            <a href=\" ");
+      if (_jspx_meth_spring_url_2(_jspx_page_context))
+        return;
       out.write("\">Order product</a>\n");
       out.write("        </div>\n");
       out.write("    </div>\n");
@@ -130,7 +134,7 @@ public final class welcome_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_1 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
     _jspx_th_spring_url_1.setPageContext(_jspx_page_context);
     _jspx_th_spring_url_1.setParent(null);
-    _jspx_th_spring_url_1.setValue("/order/P1234/2");
+    _jspx_th_spring_url_1.setValue("/users/all");
     int[] _jspx_push_body_count_spring_url_1 = new int[] { 0 };
     try {
       int _jspx_eval_spring_url_1 = _jspx_th_spring_url_1.doStartTag();
@@ -144,6 +148,32 @@ public final class welcome_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspx_th_spring_url_1.doFinally();
       _jspx_tagPool_spring_url_value_nobody.reuse(_jspx_th_spring_url_1);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_spring_url_2(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  spring:url
+    org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_2 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
+    _jspx_th_spring_url_2.setPageContext(_jspx_page_context);
+    _jspx_th_spring_url_2.setParent(null);
+    _jspx_th_spring_url_2.setValue("/order/P1234/2");
+    int[] _jspx_push_body_count_spring_url_2 = new int[] { 0 };
+    try {
+      int _jspx_eval_spring_url_2 = _jspx_th_spring_url_2.doStartTag();
+      if (_jspx_th_spring_url_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_spring_url_2[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_spring_url_2.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_spring_url_2.doFinally();
+      _jspx_tagPool_spring_url_value_nobody.reuse(_jspx_th_spring_url_2);
     }
     return false;
   }

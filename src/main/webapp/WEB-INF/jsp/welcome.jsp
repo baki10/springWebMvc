@@ -14,6 +14,7 @@
             <p> ${tagline} </p>
 
             <a href=" <spring:url value="/products" />">Products</a>
+            <a href=" <spring:url value="/users/all" />">Users</a>
             <a href=" <spring:url value="/order/P1234/2" />">Order product</a>
         </div>
     </div>

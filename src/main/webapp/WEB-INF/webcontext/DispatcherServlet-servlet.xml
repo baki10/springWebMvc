@@ -20,4 +20,7 @@
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
         <property name="basename" value="messages"/>
     </bean>
+
+    <!--Обрабатывает запросы на получение статических ресурсов-->
+    <mvc:resources mapping="/resources/**" location="/WEB-INF/resources/"/>
 </beans>

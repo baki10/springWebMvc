@@ -24,7 +24,7 @@ public class UserController {
     /**
      * @return - list of all persons
      */
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/all", method = RequestMethod.GET)
     public String allUsers(Model model) {
         List all = userService.getUsers();
         model.addAttribute("users",all);

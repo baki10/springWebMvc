@@ -29,6 +29,13 @@ bootstrap.min.css">
         <div class="col-md-5">
             <h3>${user.firstName}</h3>
             <h3>${user.lastName}</h3>
+            <p>
+               <strong>Id : </strong><span class="label label-warning">${user.id}</span>
+            </p>
+            <p>
+                <strong>Age</strong> :
+                ${user.age}
+            </p>
 
         </div>
     </div>

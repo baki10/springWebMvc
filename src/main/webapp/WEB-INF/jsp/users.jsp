@@ -10,9 +10,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <link rel="stylesheet"
-          href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <jsp:include page="fragments/staticFiles.jsp"/>
     <title>Users</title>
 </head>
 <body>
@@ -32,11 +30,21 @@
                         <h3>${user.firstName}</h3>
 
                         <p>${user.lastName}</p>
+
+                        <p>${user.age}</p>
+
+                        <p>
+                            <a href=" <spring:url value="/users/id/${user.id}" /> " class="btn btn-primary">
+                                <span class="glyphicon-info-sign glyphicon"/></span>
+                                User profile
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
         </c:forEach>
     </div>
 </section>
+<jsp:include page="fragments/footerScripts.jsp"/>
 </body>
 </html>
