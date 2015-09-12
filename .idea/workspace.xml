@@ -2,49 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7912e342-cf7b-41f6-a23d-f087ea36435e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/bakigoal/controller/OrderController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/bakigoal/controller/ProductController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/bakigoal/entity/Product.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/bakigoal/repository/ProductRepository.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/bakigoal/repository/impl/InMemoryProductRepository.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/bakigoal/service/OrderService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/bakigoal/service/ProductService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/bakigoal/service/impl/OrderServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/bakigoal/service/impl/ProductServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/product.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/products.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bakigoal/controller/OrderController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bakigoal/controller/ProductController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bakigoal/entity/Product.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bakigoal/repository/ProductRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bakigoal/repository/impl/InMemoryProductRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bakigoal/service/OrderService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bakigoal/service/ProductService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bakigoal/service/impl/OrderServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/bakigoal/service/impl/ProductServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/products_jsp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/welcome_jsp.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/addProduct.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/addUser.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bakigoal/entity/User.class" afterPath="$PROJECT_DIR$/target/classes/com/bakigoal/entity/User.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bakigoal/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/bakigoal/controller/UserController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bakigoal/repository/UserRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/bakigoal/repository/UserRepository.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bakigoal/repository/impl/UserRepositoryImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/bakigoal/repository/impl/UserRepositoryImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bakigoal/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/com/bakigoal/service/UserService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/bakigoal/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/bakigoal/service/impl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/webcontext/DispatcherServlet-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/webcontext/DispatcherServlet-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bakigoal/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/bakigoal/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bakigoal/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/bakigoal/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bakigoal/repository/UserRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/bakigoal/repository/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bakigoal/repository/impl/UserRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/bakigoal/repository/impl/UserRepositoryImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bakigoal/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/bakigoal/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bakigoal/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/bakigoal/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/webcontext/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/webcontext/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/messages.properties" afterPath="$PROJECT_DIR$/target/classes/messages.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/users.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/users.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/users_jsp.java" afterPath="$PROJECT_DIR$/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/users_jsp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/welcome.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/welcome.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="webstoreSpringMvc.iws" />
@@ -1145,7 +1110,13 @@
       <option name="project" value="LOCAL" />
       <updated>1442075460350</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="transaction setup, add, delete user">
+      <created>1442087581377</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1442087581377</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1198,7 +1169,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="base Spring MVC project" />
     <MESSAGE value="base Spring MVC project with JPA" />
-    <option name="LAST_COMMIT_MESSAGE" value="base Spring MVC project with JPA" />
+    <MESSAGE value="transaction setup, add, delete user" />
+    <option name="LAST_COMMIT_MESSAGE" value="transaction setup, add, delete user" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
