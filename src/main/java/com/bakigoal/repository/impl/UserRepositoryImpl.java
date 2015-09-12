@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
  * Created by bakigoal on 12.09.15.
  */
 @Repository
-public class UserRepositoryImpl extends AbstractBaseRepositoryImpl<User, Long> implements UserRepository {
+public class UserRepositoryImpl extends AbstractBaseRepositoryImpl<User, String> implements UserRepository {
 
     @Override
     protected Class<User> getEntityClass() {

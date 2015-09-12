@@ -75,6 +75,19 @@ public final class users_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</section>\n");
       out.write("<section class=\"container\">\n");
       out.write("    <div class=\"row\">\n");
+      out.write("        <div class=\"col-sm-6 col-md-3\">\n");
+      out.write("            <p>\n");
+      out.write("                <a href=\" ");
+      if (_jspx_meth_spring_url_0(_jspx_page_context))
+        return;
+      out.write(" \" class=\"btn btn-primary\">\n");
+      out.write("                   <span class=\"glyphicon-info-sign glyphicon\"/></span>\n");
+      out.write("                   Add new User\n");
+      out.write("                </a>\n");
+      out.write("            </p>\n");
+      out.write("        </div>\n");
+      out.write("    </div>\n");
+      out.write("    <div class=\"row\">\n");
       out.write("        ");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
@@ -96,6 +109,32 @@ public final class users_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_spring_url_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  spring:url
+    org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_0 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
+    _jspx_th_spring_url_0.setPageContext(_jspx_page_context);
+    _jspx_th_spring_url_0.setParent(null);
+    _jspx_th_spring_url_0.setValue("/users/add");
+    int[] _jspx_push_body_count_spring_url_0 = new int[] { 0 };
+    try {
+      int _jspx_eval_spring_url_0 = _jspx_th_spring_url_0.doStartTag();
+      if (_jspx_th_spring_url_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_spring_url_0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_spring_url_0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_spring_url_0.doFinally();
+      _jspx_tagPool_spring_url_value_nobody.reuse(_jspx_th_spring_url_0);
+    }
+    return false;
   }
 
   private boolean _jspx_meth_c_forEach_0(PageContext _jspx_page_context)
@@ -131,12 +170,24 @@ public final class users_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("\n");
           out.write("                        <p>\n");
           out.write("                            <a href=\" ");
-          if (_jspx_meth_spring_url_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
+          if (_jspx_meth_spring_url_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write(" \" class=\"btn btn-primary\">\n");
           out.write("                                <span class=\"glyphicon-info-sign glyphicon\"/></span>\n");
           out.write("                                User profile\n");
           out.write("                            </a>\n");
+          out.write("                            <form action = \" ");
+          if (_jspx_meth_spring_url_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
+            return true;
+          out.write(" \" method=\"POST\">\n");
+          out.write("                                <input type=\"hidden\" name=\"username\" value=\"");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${user.username}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\"/>\n");
+          out.write("                                <button style=\"width: 200px;\" type=\"submit\" class=\"btn btn-danger\">\n");
+          out.write("                                    <i class=\"glyphicon glyphicon-shopping-cart\"></i>\n");
+          out.write("                                    Delete user\n");
+          out.write("                                </button>\n");
+          out.write("                            </form>\n");
           out.write("                        </p>\n");
           out.write("                    </div>\n");
           out.write("                </div>\n");
@@ -161,28 +212,54 @@ public final class users_jsp extends org.apache.jasper.runtime.HttpJspBase
     return false;
   }
 
-  private boolean _jspx_meth_spring_url_0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
+  private boolean _jspx_meth_spring_url_1(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  spring:url
-    org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_0 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
-    _jspx_th_spring_url_0.setPageContext(_jspx_page_context);
-    _jspx_th_spring_url_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_spring_url_0.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("/users/id/${user.id}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-    int[] _jspx_push_body_count_spring_url_0 = new int[] { 0 };
+    org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_1 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
+    _jspx_th_spring_url_1.setPageContext(_jspx_page_context);
+    _jspx_th_spring_url_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
+    _jspx_th_spring_url_1.setValue((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("/users/${user.username}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+    int[] _jspx_push_body_count_spring_url_1 = new int[] { 0 };
     try {
-      int _jspx_eval_spring_url_0 = _jspx_th_spring_url_0.doStartTag();
-      if (_jspx_th_spring_url_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      int _jspx_eval_spring_url_1 = _jspx_th_spring_url_1.doStartTag();
+      if (_jspx_th_spring_url_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } catch (Throwable _jspx_exception) {
-      while (_jspx_push_body_count_spring_url_0[0]-- > 0)
+      while (_jspx_push_body_count_spring_url_1[0]-- > 0)
         out = _jspx_page_context.popBody();
-      _jspx_th_spring_url_0.doCatch(_jspx_exception);
+      _jspx_th_spring_url_1.doCatch(_jspx_exception);
     } finally {
-      _jspx_th_spring_url_0.doFinally();
-      _jspx_tagPool_spring_url_value_nobody.reuse(_jspx_th_spring_url_0);
+      _jspx_th_spring_url_1.doFinally();
+      _jspx_tagPool_spring_url_value_nobody.reuse(_jspx_th_spring_url_1);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_spring_url_2(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  spring:url
+    org.springframework.web.servlet.tags.UrlTag _jspx_th_spring_url_2 = (org.springframework.web.servlet.tags.UrlTag) _jspx_tagPool_spring_url_value_nobody.get(org.springframework.web.servlet.tags.UrlTag.class);
+    _jspx_th_spring_url_2.setPageContext(_jspx_page_context);
+    _jspx_th_spring_url_2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
+    _jspx_th_spring_url_2.setValue("/users/remove");
+    int[] _jspx_push_body_count_spring_url_2 = new int[] { 0 };
+    try {
+      int _jspx_eval_spring_url_2 = _jspx_th_spring_url_2.doStartTag();
+      if (_jspx_th_spring_url_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_spring_url_2[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_spring_url_2.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_spring_url_2.doFinally();
+      _jspx_tagPool_spring_url_value_nobody.reuse(_jspx_th_spring_url_2);
     }
     return false;
   }

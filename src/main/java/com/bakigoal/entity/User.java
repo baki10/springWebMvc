@@ -19,9 +19,8 @@ import javax.persistence.Table;
         @NamedQuery(name = "User.findByFirstName", query = "SELECT u FROM User u WHERE u.firstName = :firstName")})
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private long id;
+    @Column(name = "username")
+    private String username;
 
     @Column(name = "firstname")
     private String firstName;
@@ -32,6 +31,9 @@ public class User {
     @Column(name = "age")
     private int age;
 
+    @Column(name = "sex")
+    private String sex;
+
     public User() {
     }
 
@@ -41,12 +43,12 @@ public class User {
         this.age = age;
     }
 
-    public long getId() {
-        return id;
+    public String getUsername() {
+        return username;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getFirstName() {
@@ -73,10 +75,18 @@ public class User {
         this.age = age;
     }
 
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
+                "username='" + username + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", age=" + age +

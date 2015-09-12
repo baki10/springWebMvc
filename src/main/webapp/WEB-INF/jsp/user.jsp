@@ -30,7 +30,7 @@ bootstrap.min.css">
             <h3>${user.firstName}</h3>
             <h3>${user.lastName}</h3>
             <p>
-               <strong>Id : </strong><span class="label label-warning">${user.id}</span>
+               <strong>Id : </strong><span class="label label-warning">${user.username}</span>
             </p>
             <p>
                 <strong>Age</strong> :

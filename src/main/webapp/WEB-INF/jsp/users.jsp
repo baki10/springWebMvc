@@ -23,6 +23,16 @@
 </section>
 <section class="container">
     <div class="row">
+        <div class="col-sm-6 col-md-3">
+            <p>
+                <a href=" <spring:url value="/users/add" /> " class="btn btn-primary">
+                   <span class="glyphicon-info-sign glyphicon"/></span>
+                   Add new User
+                </a>
+            </p>
+        </div>
+    </div>
+    <div class="row">
         <c:forEach var="user" items="${users}">
             <div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
                 <div class="thumbnail">
@@ -34,10 +44,17 @@
                         <p>${user.age}</p>
 
                         <p>
-                            <a href=" <spring:url value="/users/id/${user.id}" /> " class="btn btn-primary">
+                            <a href=" <spring:url value="/users/${user.username}" /> " class="btn btn-primary">
                                 <span class="glyphicon-info-sign glyphicon"/></span>
                                 User profile
                             </a>
+                            <form action = " <spring:url value="/users/remove" /> " method="POST">
+                                <input type="hidden" name="username" value="${user.username}"/>
+                                <button style="width: 200px;" type="submit" class="btn btn-danger">
+                                    <i class="glyphicon glyphicon-shopping-cart"></i>
+                                    Delete user
+                                </button>
+                            </form>
                         </p>
                     </div>
                 </div>
