@@ -112,11 +112,10 @@ public class UserController {
     }
 
     /**
-     * @param model
      * @return - remove user form
      */
     @RequestMapping(value = "/remove", method = RequestMethod.POST)
-    public String getRemoveUserForm(@RequestParam("username") String username, Model model) {
+    public String getRemoveUserForm(@RequestParam("username") String username) {
         User deleteUser = userService.getUserByUsername(username);
         imageFileManipulator.deleteImage(deleteUser.getImageUrl());
         userService.removeUser(deleteUser);

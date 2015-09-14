@@ -16,6 +16,7 @@
 <section>
     <div class="jumbotron">
         <div class="container">
+            <jsp:include page="fragments/bodyHeader.jsp"/>
             <h1>Users</h1>
         </div>
     </div>

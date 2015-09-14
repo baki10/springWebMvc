@@ -20,6 +20,7 @@ bootstrap.min.css">
 <section>
     <div class="jumbotron">
         <div class="container">
+            <jsp:include page="fragments/bodyHeader.jsp"/>
             <h1>User</h1>
         </div>
     </div>

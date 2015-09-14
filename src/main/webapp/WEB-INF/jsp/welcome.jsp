@@ -10,6 +10,7 @@
 <section>
     <div class="jumbotron">
         <div class="container">
+            <jsp:include page="fragments/bodyHeader.jsp"/>
             <h1> ${greeting} </h1>
 
             <p> ${tagline} </p>
@@ -18,5 +19,6 @@
         </div>
     </div>
 </section>
+
 </body>
 </html>

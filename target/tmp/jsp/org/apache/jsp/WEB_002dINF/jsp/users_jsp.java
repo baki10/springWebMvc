@@ -77,6 +77,9 @@ public final class users_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<section>\n");
       out.write("    <div class=\"jumbotron\">\n");
       out.write("        <div class=\"container\">\n");
+      out.write("            ");
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "fragments/bodyHeader.jsp", out, false);
+      out.write("\n");
       out.write("            <h1>Users</h1>\n");
       out.write("        </div>\n");
       out.write("    </div>\n");

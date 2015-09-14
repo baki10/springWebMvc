@@ -7,23 +7,27 @@
 	http://www.springframework.org/schema/security/spring-security-4.0.xsd">
 
     <http auto-config="true">
-        <intercept-url pattern="/admin**" access="hasRole('ROLE_ADMIN')" />
+        <intercept-url pattern="/admin**" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/**" access="permitAll"/>
+        <!-- access denied page -->
+        <access-denied-handler error-page="/403" />
         <form-login
                 login-page="/login"
                 default-target-url="/admin"
                 authentication-failure-url="/login?error"
-                username-parameter="username"
-                password-parameter="password" />
-        <logout logout-success-url="/login?logout" />
-        <!-- enable csrf protection -->
-        <csrf/>
+                username-parameter="username_check"
+                password-parameter="password_check"/>
+        <logout logout-success-url="/login?logout"/>
+        <csrf disabled="true"/>
     </http>
 
     <authentication-manager>
         <authentication-provider>
-            <user-service>
-                <user name="admin" password="admin" authorities="ROLE_ADMIN" />
-            </user-service>
+            <jdbc-user-service data-source-ref="dataSource"
+                               users-by-username-query=
+                                       "select username,password, enabled from users where username=?"
+                               authorities-by-username-query=
+                                       "select username, role from user_roles where username =?  "/>
         </authentication-provider>
     </authentication-manager>
 
