@@ -3,13 +3,16 @@ div.error {
     background-color: #ffcccc;
     border: 2px solid red;
 }
+
 label.error {
     color: red;
 }
+
 input.error {
     background-color: #ffcccc;
 }
-span.error{
+
+span.error {
     background-color: darkred;
     color: aliceblue;
 }

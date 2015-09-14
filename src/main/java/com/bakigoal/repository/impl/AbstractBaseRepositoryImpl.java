@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by bakigoal on 12.09.15.
  */
-public abstract class AbstractBaseRepositoryImpl<T,P> implements SuperRepository<T, P> {
+public abstract class AbstractBaseRepositoryImpl<T, P> implements SuperRepository<T, P> {
     @PersistenceContext
     protected EntityManager em;
 

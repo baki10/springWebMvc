@@ -27,16 +27,29 @@ bootstrap.min.css">
 <section class="container">
     <div class="row">
         <div class="col-md-5">
-            <h3>${user.firstName}</h3>
-            <h3>${user.lastName}</h3>
-            <p>
-               <strong>Id : </strong><span class="label label-warning">${user.username}</span>
-            </p>
-            <p>
-                <strong>Age</strong> :
-                ${user.age}
-            </p>
+            <div class="thumbnail">
+                <a href=" <spring:url value="/users/edit/${user.username}" /> " class="btn btn-info" role="button">
+                    Edit
+                </a>
 
+                <h3>${user.firstName}</h3>
+
+                <h3>${user.lastName}</h3>
+                <c:if test="${not empty user.imageUrl}">
+                    <div class="thumbnail">
+                        <img style="width: 100%" src="<c:url value="/resources/images/${user.imageUrl}"/>" alt="">
+                    </div>
+                </c:if>
+
+                <p>
+                    <strong>Id : </strong><span class="label label-warning">${user.username}</span>
+                </p>
+
+                <p>
+                    <strong>Age</strong> :
+                    ${user.age}
+                </p>
+            </div>
         </div>
     </div>
 </section>

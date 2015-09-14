@@ -8,6 +8,12 @@
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
+    <!-- Scans within the base package of the application for @Components to
+        configure as beans -->
+    <bean id="placeholderConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:app.properties"/>
+    </bean>
+
     <!-- Enable Spring Annotation Configuration -->
     <context:annotation-config/>
     <!-- Scan for all of Spring components such as Spring Service -->
@@ -19,10 +25,10 @@
 
     <!--    если не удалось через jndi, то наилучший выход - настройка пула соединений-->
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
-        <property name="driverClassName" value="org.postgresql.Driver"/>
-        <property name="url" value="jdbc:postgresql://localhost:5432/webstore"/>
-        <property name="username" value="postgres"/>
-        <property name="password" value="postgres"/>
+        <property name="driverClassName" value="${db.driver}"/>
+        <property name="url" value="${db.url}"/>
+        <property name="username" value="${db.username}"/>
+        <property name="password" value="${db.password}"/>
         <property name="initialSize" value="5"/>
         <property name="maxTotal" value="10"/>
     </bean>
@@ -31,19 +37,19 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="jpaProperties">
             <props>
-                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.hbm2ddl.auto">${db.hibernate.hbm2ddl.auto}</prop>
             </props>
         </property>
         <property name="jpaVendorAdapter" ref="jpaVendorAdapter"/>
         <property name="jpaDialect" ref="jpaDialect"/>
-        <property name="packagesToScan" value="com.bakigoal.entity"/>
+        <property name="packagesToScan" value="${db.entitymanager.packages.to.scan}"/>
     </bean>
 
     <bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
-        <property name="database" value="POSTGRESQL"/>
-        <property name="showSql" value="true"/>
+        <property name="database" value="${db.dbName}"/>
+        <property name="showSql" value="${db.hibernate.show_sql}"/>
         <property name="generateDdl" value="false"/>
-        <property name="databasePlatform" value="org.hibernate.dialect.PostgreSQL9Dialect"/>
+        <property name="databasePlatform" value="${db.hibernate.dialect}"/>
     </bean>
 
     <bean id="jpaDialect" class="org.springframework.orm.jpa.vendor.HibernateJpaDialect"/>
@@ -54,5 +60,7 @@
 
     <!-- Detect @Transactional -->
     <tx:annotation-driven transaction-manager="transactionManager"/>
+
+
 
 </beans>

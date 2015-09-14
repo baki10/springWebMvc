@@ -11,6 +11,7 @@
     <div class="jumbotron">
         <div class="container">
             <h1> ${greeting} </h1>
+
             <p> ${tagline} </p>
 
             <a href=" <spring:url value="/users/all" />">Users</a>

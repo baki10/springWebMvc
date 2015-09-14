@@ -11,18 +11,18 @@
 <html>
 <head>
     <jsp:include page="fragments/staticFiles.jsp"/>
-    <title>Add user</title>
+    <title>/edit user</title>
 </head>
 <body>
 <section>
     <div class="container">
         <div class="jumbotron">
-            <h1>Add New USER</h1>
+            <h1>Edit USER</h1>
         </div>
     </div>
 </section>
 <section class="container">
-    <form:form modelAttribute="newUser" class="form-horizontal" enctype="multipart/form-data">
+    <form:form modelAttribute="user" class="form-horizontal" enctype="multipart/form-data">
         <fieldset>
             <legend>Add new user</legend>
             <form:errors path="*" element="div" cssClass="error" cssStyle="width:100%;background:yellow"/>
@@ -83,8 +83,7 @@
 
             <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-10">
-                    <input type="submit" id="btnAdd" class=
-                            "btn btn-primary" value="Add USER"/>
+                    <input type="submit" id="btnAdd" class="btn btn-primary" value="Edit USER"/>
                 </div>
             </div>
         </fieldset>

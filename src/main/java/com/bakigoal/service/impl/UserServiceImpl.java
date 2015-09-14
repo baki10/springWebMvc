@@ -13,6 +13,7 @@ import java.util.List;
  * Created by bakigoal on 12.09.15.
  */
 @Service
+@Transactional(value = "transactionManager")
 public class UserServiceImpl implements UserService {
 
     private UserRepository userDAO;
@@ -28,7 +29,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional(value = "transactionManager")
     public void registerNewUser(User customer) {
         userDAO.create(customer);
     }
@@ -44,7 +44,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional(value = "transactionManager")
     public void removeUser(User deleteUser) {
         userDAO.delete(deleteUser);
     }

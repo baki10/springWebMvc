@@ -3,11 +3,10 @@ package com.bakigoal.repository;
 import java.util.List;
 
 /**
- *
- * @author ilmir
  * @param <T>
+ * @author ilmir
  */
-public interface SuperRepository<T,P> {
+public interface SuperRepository<T, P> {
 
     public T create(T t);
 

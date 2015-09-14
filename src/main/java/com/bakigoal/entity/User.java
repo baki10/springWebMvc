@@ -1,5 +1,6 @@
 package com.bakigoal.entity;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  * Created by bakigoal on 12.09.15.
@@ -18,7 +21,11 @@ import javax.persistence.Table;
         @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u"),
         @NamedQuery(name = "User.findByFirstName", query = "SELECT u FROM User u WHERE u.firstName = :firstName")})
 public class User {
+
     @Id
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 3, max = 50)
     @Column(name = "username")
     private String username;
 
@@ -33,6 +40,9 @@ public class User {
 
     @Column(name = "sex")
     private String sex;
+
+    @Column(name = "imageUrl")
+    private String imageUrl;
 
     public User() {
     }
@@ -77,6 +87,14 @@ public class User {
 
     public String getSex() {
         return sex;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public void setSex(String sex) {
