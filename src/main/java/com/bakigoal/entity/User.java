@@ -1,16 +1,22 @@
 package com.bakigoal.entity;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by bakigoal on 12.09.15.
@@ -43,6 +49,14 @@ public class User {
 
     @Column(name = "imageUrl")
     private String imageUrl;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user",fetch = FetchType.LAZY)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Set<UserFriend> userFriends = new HashSet<>();
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="friend", fetch = FetchType.LAZY )
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Set<UserFriend>  userGroups  = new HashSet<>();
 
     public User() {
     }
@@ -99,6 +113,38 @@ public class User {
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    public Set<UserFriend> getUserFriends() {
+        return userFriends;
+    }
+
+    public void setUserFriends(Set<UserFriend> userFriends) {
+        this.userFriends = userFriends;
+    }
+
+    public Set<UserFriend> getUserGroups() {
+        return userGroups;
+    }
+
+    public void setUserGroups(Set<UserFriend> userGroups) {
+        this.userGroups = userGroups;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        User user = (User) o;
+
+        return username.equals(user.username);
+
+    }
+
+    @Override
+    public int hashCode() {
+        return username.hashCode();
     }
 
     @Override

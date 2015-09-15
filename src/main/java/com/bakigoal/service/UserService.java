@@ -18,4 +18,10 @@ public interface UserService {
     User updateUser(User customer);
 
     void removeUser(User deleteUser);
+
+    void addFriendToUser(User user, User friend);
+
+    void deleteFriendFromUser(User user, User friend);
+
+    List<User> getUserFriends(String userId);
 }

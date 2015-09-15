@@ -165,6 +165,38 @@ public class UserController {
         }
 
         userService.updateUser(newUser);
-        return "redirect:/users/"+username;
+        return "redirect:/users/" + username;
+    }
+
+    @RequestMapping(value = "/friends", method = RequestMethod.GET)
+    public String userFriends(@RequestParam(value = "userId") String userId, Model model){
+        model.addAttribute("friends",userService.getUserFriends(userId));
+        return "friends";
+    }
+
+    @RequestMapping(value = "/addFriend", method = RequestMethod.GET)
+    public String addFriend(@RequestParam(value = "userId") String userId,
+                            @RequestParam(value = "friendId") String friendId) {
+        if (userId == null || friendId == null) {
+            return "redirect:/users";
+        }
+        User user = userService.getUserByUsername(userId);
+        User friend = userService.getUserByUsername(friendId);
+        userService.addFriendToUser(user, friend);
+
+        return "redirect:/users";
+    }
+
+    @RequestMapping(value = "/deleteFriend", method = RequestMethod.GET)
+    public String deleteFriend(@RequestParam(value = "userId") String userId,
+                               @RequestParam(value = "friendId") String friendId) {
+        if (userId == null || friendId == null) {
+            return "redirect:/users";
+        }
+        User user = userService.getUserByUsername(userId);
+        User friend = userService.getUserByUsername(friendId);
+        userService.deleteFriendFromUser(user, friend);
+
+        return "redirect:/users";
     }
 }
